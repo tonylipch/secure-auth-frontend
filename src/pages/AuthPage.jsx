@@ -141,9 +141,8 @@ export default function AuthPage({ theme, setTheme }) {
             >
               Create account
             </button>
-            {/* TODO: replace href with your GitHub repo URL */}
             <a
-              href="https://github.com/tonylipch/secure-auth-backendhttps://github.com/tonylipch/secure-auth-backend"
+              href="https://github.com/tonylipch/secure-auth-backend"
               className="btn-dark inline-flex items-center gap-2 rounded-full px-6"
               target="_blank"
               rel="noreferrer"
