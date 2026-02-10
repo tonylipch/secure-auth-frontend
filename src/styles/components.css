@@ -1,0 +1,87 @@
+@layer components {
+  .app-shell {
+    background: radial-gradient(1200px 800px at 10% 10%, var(--bg-accent), transparent),
+      radial-gradient(1000px 700px at 90% 20%, rgba(56, 189, 248, 0.12), transparent),
+      var(--bg);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    @apply rounded-3xl shadow-soft backdrop-blur-xl;
+  }
+
+  .btn-primary {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid var(--btn-border);
+    @apply rounded-xl px-4 py-3 text-sm font-semibold transition;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--btn-glow);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-strong {
+    background: var(--btn-strong-bg);
+    color: var(--btn-strong-text);
+    @apply rounded-xl px-4 py-3 text-sm font-semibold transition;
+  }
+
+  .btn-strong:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-dark {
+    background: #0b1220;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    @apply rounded-xl px-4 py-3 text-sm font-semibold transition;
+  }
+
+  .btn-dark:hover {
+    transform: translateY(-1px);
+    background: #111827;
+  }
+
+  [data-theme="dark"] .btn-dark {
+    background: rgba(255, 255, 255, 0.92);
+    color: #0b1020;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  [data-theme="dark"] .btn-dark:hover {
+    background: #ffffff;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-slate/20 px-4 py-3 text-sm focus:outline-none;
+    border-color: var(--card-border);
+  }
+
+  .field:focus {
+    box-shadow: 0 0 0 4px var(--ring);
+  }
+
+  .pill-active {
+    background: var(--btn-strong-bg);
+    color: #ffffff;
+    border: 1px solid var(--card-border);
+    @apply rounded-full px-4 py-1 text-xs font-semibold shadow transition;
+  }
+
+  .pill-inactive {
+    color: var(--muted);
+    border: 1px solid transparent;
+    @apply rounded-full px-4 py-1 text-xs font-semibold transition;
+  }
+
+  .pill-inactive:hover {
+    border-color: var(--card-border);
+    background: var(--btn-bg);
+    color: var(--text);
+  }
+
+}

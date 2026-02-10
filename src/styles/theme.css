@@ -1,0 +1,76 @@
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg: #f7fbff;
+    --bg-accent: #e0f2fe;
+    --text: #0b1220;
+    --muted: #64748b;
+    --card: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(14, 165, 233, 0.2);
+    --btn-bg: rgba(14, 165, 233, 0.18);
+    --btn-border: rgba(14, 165, 233, 0.45);
+    --btn-text: #0b1220;
+    --btn-strong-bg: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    --btn-strong-text: #ffffff;
+    --ring: rgba(14, 165, 233, 0.35);
+    --thumb-bg: rgba(255, 255, 255, 0.9);
+    --thumb-text: #0b1220;
+    --btn-glow: 0 12px 30px -18px rgba(14, 165, 233, 0.6);
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b1020;
+    --bg-accent: #0f172a;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --card: rgba(15, 23, 42, 0.75);
+    --card-border: rgba(196, 181, 253, 0.35);
+    --btn-bg: linear-gradient(135deg, #ddd6fe, #a78bfa);
+    --btn-border: rgba(221, 214, 254, 0.5);
+    --btn-text: #0b1020;
+    --btn-strong-bg: linear-gradient(135deg, #c4b5fd, #a78bfa);
+    --btn-strong-text: #0b1020;
+    --ring: rgba(196, 181, 253, 0.35);
+    --thumb-bg: rgba(15, 23, 42, 0.9);
+    --thumb-text: #e2e8f0;
+    --btn-glow: 0 16px 32px -20px rgba(196, 181, 253, 0.5);
+    --terminal-green: #39ff88;
+  }
+
+  body {
+    @apply font-body;
+    background: radial-gradient(1200px 800px at 10% 10%, var(--bg-accent), transparent),
+      radial-gradient(1000px 700px at 90% 20%, rgba(56, 189, 248, 0.12), transparent),
+      var(--bg);
+    color: var(--text);
+    cursor: default;
+  }
+
+  :root {
+    --terminal-green: #1ea65b;
+  }
+
+  *, *::before, *::after {
+    font-family: inherit;
+    cursor: inherit;
+  }
+
+  button, input, textarea, select {
+    font-family: inherit;
+  }
+
+  button, a, [role="button"] {
+    cursor: pointer;
+  }
+
+  input, textarea, select {
+    cursor: text;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+}
